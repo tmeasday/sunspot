@@ -26,6 +26,11 @@ TEXT
   end
 
   Jeweler::RubyforgeTasks.new
+  
+  Jeweler::LocalTasks.new do |s|
+    s.ssh_host = 'gemsrv@elara.icyte.com'
+    s.host_dir = '/data/rubygems/www'
+  end
 end
 
 namespace :release do
